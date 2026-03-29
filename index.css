@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 📱 App */
+.app {
+  width: 360px;
+  height: 600px;
+  overflow-y: auto;
+  background: #020617;
+  border-radius: 25px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* 👤 Profile */
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff4d6d;
+}
+
+.profile input {
+  margin-top: 8px;
+}
+
+.profile h2 {
+  margin: 10px 0;
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(45deg,#ff4d6d,#ff758f);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Task */
+li {
+  background: #1e293b;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 15px;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.low { border-left: 5px solid green; }
+.medium { border-left: 5px solid orange; }
+.high { border-left: 5px solid red; }
+
+/* Progress */
+#progress {
+  height: 8px;
+  background: linear-gradient(90deg,#22c55e,#06b6d4);
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* 💖 Welcome */
+#welcome {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#welcomeText {
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* 💕 Hearts */
+.heart {
+  position: fixed;
+  color: pink;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* 🔔 Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #22c55e;
+  padding: 10px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
