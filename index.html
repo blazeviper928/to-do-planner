@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Planner 😎</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- 💖 Welcome Screen -->
+<div id="welcome">
+  <h1 id="welcomeText"></h1>
+</div>
+
+<!-- 🎧 Music -->
+<audio id="bgMusic" src="song.mp3" loop></audio>
+
+<div class="app">
+
+  <!-- 👤 Profile -->
+  <div class="profile">
+    <img id="profilePic" src="" alt="Profile">
+    <input type="file" id="uploadPic">
+    <h2 id="userName"></h2>
+  </div>
+
+  <h1>🌸 Your Planner</h1>
+
+  <input id="taskInput" placeholder="What do you want to do?">
+  <input type="datetime-local" id="dateInput">
+
+  <select id="priority">
+    <option value="low">💚 Low</option>
+    <option value="medium">🧡 Medium</option>
+    <option value="high">❤️ High</option>
+  </select>
+
+  <button onclick="addTask()">Add Task</button>
+
+  <input id="search" placeholder="Search..." oninput="displayTasks()">
+
+  <div class="filters">
+    <button onclick="filter='all';displayTasks()">All</button>
+    <button onclick="filter='pending';displayTasks()">Pending</button>
+    <button onclick="filter='completed';displayTasks()">Done</button>
+  </div>
+
+  <div id="progress"></div>
+
+  <ul id="taskList"></ul>
+
+  <div id="toast"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
